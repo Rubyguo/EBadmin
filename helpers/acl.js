@@ -2,7 +2,6 @@
  * Created by Administrator on 2016/11/19.
  */
 
-var co = require('co'), thunkify = require('thunkify');
 var accesslist = {
     "guest" : {
         "view" : ["/","/mainpage","/graph","fadfaf","afewfew"]
@@ -34,5 +33,5 @@ exports.access = function (req, res, next) {
 
 exports.mysqlaccess = function (req, res, next) {
     
-}
+};
 
