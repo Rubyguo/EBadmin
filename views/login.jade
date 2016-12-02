@@ -25,11 +25,14 @@ html
                 div
                     h1.logo-name H+
                 h3 欢迎使用 H+
-                form.m-t(role='form', method='post', action='login')
+                form.m-t(role='form', method='post', action='login', novalidate)
                     .form-group
                         input.form-control(type='text', name='username', placeholder='用户名', required='')
                     .form-group
                         input.form-control(type='password', name='password', placeholder='密码', required='')
+                    .form-group
+                        input.form-control(type='password', name='password', placeholder='密码', required='')
+
                     button.btn.btn-primary.block.full-width.m-b(type='submit') 登 录
                     p.text-muted.text-center
                         a(href='login')
