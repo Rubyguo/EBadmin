@@ -30,7 +30,7 @@ html
                     h1.logo-name H+
                 h3 欢迎注册 H+
                 p 创建一个H+新账户
-                form.m-t(role='form', ng-app='myApp', ng-controller='validateCtrl', name='myForm', novalidate='', action='')
+                form.m-t(role='form', ng-app='registerApp', ng-controller='validateCtrl', name='myForm', novalidate='', action='')
                     .form-group
                         input.form-control(type='text', name='user', ng-model='user', placeholder='请输入用户名', required='')
                         span(style='color:red', ng-show='myForm.user.$dirty && myForm.user.$invalid')
@@ -51,10 +51,4 @@ html
         script(src='js/jquery.min.js?v=2.1.4')
         script(src='js/bootstrap.min.js?v=3.3.6')
         script(src='js/plugins/iCheck/icheck.min.js')
-        script.
-            var app = angular.module('myApp', []);
-            app.controller('validateCtrl', function($scope){
-                //$scope.user = 'John Doe';
-                $scope.email = 'john.doe@gmail.com';
-            });
     // Mirrored from www.zi-han.net/theme/hplus/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:52 GMT

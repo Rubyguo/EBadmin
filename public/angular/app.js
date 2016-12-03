@@ -5,8 +5,7 @@
 
 // Declare app level module which depends on views, and components
 var app = angular.module('myApp', [
-        'oc.lazyLoad',
-        'ui.router'
+        'oc.lazyLoad'
     ])
     .controller('AppCtrl',['$scope', function ($scope) {
         $scope.$on('ocLazyLoad.moduleLoaded', function(e, module) {
