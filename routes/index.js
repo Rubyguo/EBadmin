@@ -1,38 +1,49 @@
 var express = require('express');
 var router = express.Router();
 var login = require('../helpers/login');
+var register = require('../helpers/register');
 var acl = require('../helpers/acl');
+
+
 
 /* GET home page. */
 router.get('/', acl.access, function(req, res, next) {
-  res.render('index', { user: req.session.user});
+  res.render('index', { username: req.session.userId});
+  console.log(req.session.userId);
 });
 
-router.get('/mainpage', acl.access, function(req, res, next) {
+//主页
+router.get('/mainpage', function(req, res, next) {
   res.render('index_v1', { title: 'Express' });
 });
 
-router.get('/graph', acl.access, function(req, res, next) {
+//图页面
+router.get('/graph', function(req, res, next) {
   res.render('pages/graph', { title: 'Express' });
 });
 
+//登录页面
 router
     .get('/login', function(req, res, next) {
-      res.render('login', { title: 'Express' });
+        res.render('login', { usererr: 'false', passworderr: 'false'});
     })
     .post('/login', login.accessdb);
 
-router.get('/register', function(req, res, next) {
-  res.render('register', { title: 'Express' });
-});
+//注册页面
+router
+    .get('/register', function(req, res, next) {
+        res.render('register', { title: 'Express' });
+    })
+    .post('/register', register.accessdb);
 
+//若用户请求了无权限的资源
 router.get('/cannot_access', function(req, res, next) {
   res.render('pages/cannot_access', { title: '您没有访问该页面的权限' });
 });
 
-router.get('/wrongpassword', function(req, res, next) {
-    res.render('pages/cannot_access', { title: '密码错误' });
-    //过一段时间自动跳转登录页面
+//用户正在审批
+router.get('/waiting_authorize', function(req, res, next) {
+    res.render('pages/waiting_authorize', { title: '您的账号已提交' });
 });
 
 module.exports = router;

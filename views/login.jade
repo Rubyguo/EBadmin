@@ -15,6 +15,7 @@ html
         link(href='css/font-awesome.min93e3.css?v=4.4.0', rel='stylesheet')
         link(href='css/animate.min.css', rel='stylesheet')
         link(href='css/style.min862f.css?v=4.1.0', rel='stylesheet')
+        script(src='angular/angular.min.js')
         //if lt IE 9
           meta(http-equiv='refresh', content='0;ie.html')
         script.
@@ -23,22 +24,33 @@ html
         .middle-box.text-center.loginscreen.animated.fadeInDown
             div
                 div
-                    h1.logo-name H+
-                h3 欢迎使用 H+
-                form.m-t(role='form', method='post', action='login', novalidate)
+                    h1.logo-name D
+                h3 欢迎使用
+                form.m-t(role='form', ng-app='myApp', ng-controller='userCtrl', name='myForm', method='post', action='login', novalidate)
                     .form-group
-                        input.form-control(type='text', name='username', placeholder='用户名', required='')
+                        input.form-control(type='text', ng-model='username', name='username', placeholder='用户名', required='')
+                        span(style='color:red', ng-show = usererr) 用户名不存在！
                     .form-group
-                        input.form-control(type='password', name='password', placeholder='密码', required='')
-                    .form-group
-                        input.form-control(type='password', name='password', placeholder='密码', required='')
-
-                    button.btn.btn-primary.block.full-width.m-b(type='submit') 登 录
+                        input.form-control(type='password', ng-model='password', name='password', placeholder='密码', required='')
+                        span(style='color:red', ng-show = passworderr) 密码错误！
+                    button.btn.btn-primary.block.full-width.m-b(ng-click='postUser') 登 录
                     p.text-muted.text-center
                         a(href='login')
                             small 忘记密码了？
                         a(href='register') 注册一个新账号
         script(src='js/jquery.min.js?v=2.1.4')
         script(src='js/bootstrap.min.js?v=3.3.6')
-        script(src='')
+        script.
+            var app = angular.module('myApp', []).
+            controller('userCtrl', function ($scope, $http) {
+                $scope.postUser = function () {
+                    $http.post("/login", {
+                        username: $scope.username,
+                        password: $scope.password
+                    }).
+                    success(function () {
+                        //$scope.user = response.user;
+                    });
+                };
+            });
     // Mirrored from www.zi-han.net/theme/hplus/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:18:23 GMT

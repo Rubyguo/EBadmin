@@ -8,7 +8,7 @@ html
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
         title H+ 后台主题UI框架 - 注册
-        link(rel='shortcut icon', href='/img/favicon.ico')
+        link(rel='shortcut icon', href='favicon.ico')
         link(href='css/bootstrap.min14ed.css?v=3.3.6', rel='stylesheet')
         link(href='css/font-awesome.min93e3.css?v=4.4.0', rel='stylesheet')
         link(href='css/plugins/iCheck/custom.css', rel='stylesheet')
@@ -16,10 +16,8 @@ html
         link(href='css/style.min862f.css?v=4.1.0', rel='stylesheet')
         script.
             if(window.top !== window.self){ window.top.location = window.location;}
-        script(type='text/javascript', src='http://tajs.qq.com/stats?sId=9051096', charset='UTF-8')
-        script(src="bower_components/angular/angular.js")
-        script(src="bower_components/angular-ui-router/release/angular-ui-router.js")
-        script(src="bower_components/oclazyload/dist/ocLazyLoad.js")
+        //script(type='text/javascript', src='http://tajs.qq.com/stats?sId=9051096', charset='UTF-8')
+        script(src='angular/angular.min.js')
         //script(src="angular/app.js")
         //script(src="angular/app.constant.js")
         //script(src="angular/app.router.js")
@@ -27,28 +25,40 @@ html
         .middle-box.text-center.loginscreen.animated.fadeInDown
             div
                 div
-                    h1.logo-name H+
-                h3 欢迎注册 H+
-                p 创建一个H+新账户
-                form.m-t(role='form', ng-app='registerApp', ng-controller='validateCtrl', name='myForm', novalidate='', action='')
+                    h1.logo-name ARG
+                h3 欢迎注册
+                p 创建一个新账户
+                form.m-t(role='form', ng-app='myApp', ng-controller='validateCtrl', name='myForm', novalidate='', action='/register', method='post')
                     .form-group
-                        input.form-control(type='text', name='user', ng-model='user', placeholder='请输入用户名', required='')
-                        span(style='color:red', ng-show='myForm.user.$dirty && myForm.user.$invalid')
-                            span(ng-show='myForm.user.$error.required') 用户名是必须的。
+                        input.form-control(type='text', name='username', ng-model='username', placeholder='请输入用户名', required='')
+                        span(style='color:red', ng-show='myForm.username.$dirty && myForm.username.$invalid')
+                            span(ng-show='myForm.username.$error.required') 用户名是必须的。
                     .form-group
-                        input.form-control(type='password', placeholder='请输入密码', required='')
+                        input.form-control(type='password', ng-model='password', ng-minlength='6', ng-maxlength='20', name='password', placeholder='请输入密码', required='')
+                        span(style='color: red', ng-show='myForm.password.$invalid')
+                            span(ng-show='myForm.password.$error.minlength') *密码长度不小于6
+                            span(ng-show='myForm.password.$error.maxlength') *密码长度不超过20
                     .form-group
-                        input.form-control(type='password', placeholder='请再次输入密码', required='')
+                        input.form-control(type='password', ng-model="passwordagain", name="passwordagain", id="passwordagain", placeholder='请再次输入密码', required='')
+                        span(style='color: red', ng-show='myForm.passwordagain.$invalid')
+                            span(ng-show='passwordagain!=password') *两次密码输入不一致
                     .form-group
                         input.form-control(type='email', name='email', ng-model='email', required='')
                         span(style='color:red', ng-show='myForm.email.$dirty && myForm.email.$invalid')
                             span(ng-show='myForm.email.$error.required') 邮箱是必须的。
                             span(ng-show='myForm.email.$error.email') 非法的邮箱地址。
-                    button.btn.btn-primary.block.full-width.m-b(type='submit', ng-disabled='myForm.email.$dirty && myForm.email.$invalid') 注 册
+                    button.btn.btn-primary.block.full-width.m-b(type='submit', ng-disabled='myForm.email.$dirty && myForm.email.password.$invalid || myForm.password.$invalid || password != passwordagain') 注 册
                     p.text-muted.text-centerk
                         small 已经有账户了？
-                        a(href='login.html') 点此登录
+                        a(href='/login') 点此登录
         script(src='js/jquery.min.js?v=2.1.4')
         script(src='js/bootstrap.min.js?v=3.3.6')
         script(src='js/plugins/iCheck/icheck.min.js')
+
+        script.
+            var app = angular.module('myApp', []).
+            controller('validateCtrl', function ($scope) {
+
+            });
+
     // Mirrored from www.zi-han.net/theme/hplus/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:52 GMT

@@ -1,3 +1,4 @@
+//var debug = require('debug');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -6,13 +7,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var session = require('express-session');
-
 var index = require('./routes/index');
 
 var app = express();
 
 //连接mongodb数据库
-mongoose.connect('mongodb://localhost/users');
+mongoose.connect('mongodb://127.0.0.1/users');
+
+//设置session
 app.use(session({
   secret:'secret',
   resave:true,
@@ -28,13 +30,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'app')));
+app.use(express.static(path.join(__dirname, 'bower_components')));
 
 app.use('/', index);
 //app.use('/users', users);
