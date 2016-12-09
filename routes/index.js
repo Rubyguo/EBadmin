@@ -3,18 +3,30 @@ var router = express.Router();
 var login = require('../helpers/login');
 var register = require('../helpers/register');
 var acl = require('../helpers/acl');
-
-
+var auth = require('../helpers/user_reg');
 
 /* GET home page. */
 router.get('/', acl.access, function(req, res, next) {
-  res.render('index', { username: req.session.userId});
-  console.log(req.session.userId);
+    res.render('index', { username: req.session.userId, userrole: req.session.userRole});
+    console.log(req.session.userId);
+    console.log(req.session.userRole);
 });
 
 //主页
 router.get('/mainpage', function(req, res, next) {
-  res.render('index_v1', { title: 'Express' });
+  res.render('mainpage', { title: 'Express' });
+});
+
+//用户审批页面
+router.get('/authorize', auth.accessdb, function(req, res, next) {
+    //res.render('pages/user_authorize', { title: 'Express' });
+    //res.send();
+});
+
+//用户审批页面
+router.post('/addUser', auth.adduser, acl.getRoles, function(req, res, next) {
+    //获取批准的用户名
+    //var username = req.body.adduser;
 });
 
 //图页面

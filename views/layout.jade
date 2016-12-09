@@ -17,6 +17,7 @@ html
     link(href='css/animate.min.css', rel='stylesheet')
     link(href='css/style.min862f.css?v=4.1.0', rel='stylesheet')
   body.fixed-sidebar.full-height-layout.gray-bg(style='overflow:hidden')
+    block content
     script(src='js/jquery.min.js?v=2.1.4')
     script(src='js/bootstrap.min.js?v=3.3.6')
     script(src='js/plugins/metisMenu/jquery.metisMenu.js')
@@ -25,7 +26,15 @@ html
     script(src='js/hplus.min.js?v=4.1.0')
     script(type='text/javascript', src='js/contabs.min.js')
     script(src='js/plugins/pace/pace.min.js')
-    block content
+    script(src='angular/angular.min.js')
+    script.
+      var app = angular.module('myApp', [])
+              .controller('userCtrl', function ($scope) {
+                //从后台读入
+                $scope.name = username;
+                $scope.role = userrole;
+      });
+
 
 
 

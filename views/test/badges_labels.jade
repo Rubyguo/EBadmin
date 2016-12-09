@@ -1,0 +1,132 @@
+doctype html
+html
+    // Mirrored from www.zi-han.net/theme/hplus/badges_labels.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:53 GMT
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title H+ 后台主题UI框架 - 徽章，标签，进度条
+        meta(name='keywords', content='H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台')
+        meta(name='description', content='H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术')
+        link(rel='shortcut icon', href='favicon.ico')
+        link(href='css/bootstrap.min14ed.css?v=3.3.6', rel='stylesheet')
+        link(href='css/font-awesome.min93e3.css?v=4.4.0', rel='stylesheet')
+        link(href='css/animate.min.css', rel='stylesheet')
+        link(href='css/style.min862f.css?v=4.1.0', rel='stylesheet')
+    body.gray-bg
+        .wrapper.wrapper-content.animated.fadeInRight
+            .row
+                .col-sm-6
+                    .ibox.float-e-margins
+                        .ibox-title
+                            h5 徽章 (Badges)
+                            .ibox-tools
+                                a.collapse-link
+                                    i.fa.fa-chevron-up
+                                a.dropdown-toggle(data-toggle='dropdown', href='badges_labels.html#')
+                                    i.fa.fa-wrench
+                                ul.dropdown-menu.dropdown-user
+                                    li
+                                        a(href='badges_labels.html#') 选项1
+                                    li
+                                        a(href='badges_labels.html#') 选项2
+                                a.close-link
+                                    i.fa.fa-times
+                        .ibox-content
+                            p
+                                | 要添加徽章，只需要在元素上添加
+                                code .badge
+                                | 即可，改变徽章的颜色可使用如下class，如
+                                code .badge-primary
+                                | 。
+                            p
+                                span.badge 空
+                            p
+                                span.badge.badge-primary badge-primary
+                            p
+                                span.badge.badge-info badge-info
+                            p
+                                span.badge.badge-success badge-success
+                            p
+                                span.badge.badge-warning badge-warning
+                            p
+                                span.badge.badge-danger badge-danger
+                .col-sm-6
+                    .ibox.float-e-margins
+                        .ibox-title
+                            h5 标签 (Labels)
+                            .ibox-tools
+                                a.collapse-link
+                                    i.fa.fa-chevron-up
+                                a.dropdown-toggle(data-toggle='dropdown', href='badges_labels.html#')
+                                    i.fa.fa-wrench
+                                ul.dropdown-menu.dropdown-user
+                                    li
+                                        a(href='badges_labels.html#') 选项1
+                                    li
+                                        a(href='badges_labels.html#') 选项2
+                                a.close-link
+                                    i.fa.fa-times
+                        .ibox-content
+                            p
+                                | 要添加徽章，只需要在元素上添加class
+                                code .label
+                                | 即可，如果需要修改颜色，添加如下class，如
+                                code .label-primary
+                            p
+                                span.label 空
+                            p
+                                span.label.label-primary label-primary
+                            p
+                                span.label.label-info label-info
+                            p
+                                span.label.label-success label-success
+                            p
+                                span.label.label-warning label-warning
+                            p
+                                span.label.label-danger label-danger
+            .row
+                .col-sm-12
+                    .ibox.float-e-margins
+                        .ibox-title
+                            h5 进度条 (Progress Bars)
+                            .ibox-tools
+                                a.collapse-link
+                                    i.fa.fa-chevron-up
+                                a.dropdown-toggle(data-toggle='dropdown', href='badges_labels.html#')
+                                    i.fa.fa-wrench
+                                ul.dropdown-menu.dropdown-user
+                                    li
+                                        a(href='badges_labels.html#') 选项1
+                                    li
+                                        a(href='badges_labels.html#') 选项2
+                                a.close-link
+                                    i.fa.fa-times
+                        .ibox-content
+                            h5 基本
+                            .progress
+                                .progress-bar.progress-bar-success(style='width: 35%', aria-valuemax='100', aria-valuemin='0', aria-valuenow='35', role='progressbar')
+                                    span.sr-only 35% Complete (success)
+                            .progress.progress-bar-default
+                                .progress-bar(style='width: 43%', aria-valuemax='100', aria-valuemin='0', aria-valuenow='43', role='progressbar')
+                                    span.sr-only 43% Complete (success)
+                            h5 条纹
+                            .progress.progress-striped
+                                .progress-bar.progress-bar-warning(style='width: 50%', aria-valuemax='100', aria-valuemin='0', aria-valuenow='50', role='progressbar')
+                                    span.sr-only 40% Complete (success)
+                            h5 动画
+                            .progress.progress-striped.active
+                                .progress-bar.progress-bar-danger(style='width: 75%', aria-valuemax='100', aria-valuemin='0', aria-valuenow='75', role='progressbar')
+                                    span.sr-only 40% Complete (success)
+                            h5 堆叠
+                            .progress.progress-striped.active
+                                .progress-bar.progress-bar-success(style='width: 30%')
+                                    span.sr-only 30% Complete (success)
+                                .progress-bar.progress-bar-warning(style='width: 20%')
+                                    span.sr-only 15% Complete (warning)
+                                .progress-bar.progress-bar-danger(style='width: 40%')
+                                    span.sr-only 40% Complete (danger)
+        script(src='js/jquery.min.js?v=2.1.4')
+        script(src='js/bootstrap.min.js?v=3.3.6')
+        script(src='js/content.min.js?v=1.0.0')
+        script(type='text/javascript', src='http://tajs.qq.com/stats?sId=9051096', charset='UTF-8')
+    // Mirrored from www.zi-han.net/theme/hplus/badges_labels.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:53 GMT

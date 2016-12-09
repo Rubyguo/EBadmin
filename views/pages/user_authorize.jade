@@ -1,3 +1,88 @@
 //
    Created by gr on 2016/12/7.
+//
 
+html
+    head
+        meta(charset='utf-8')
+        link(href='css/bootstrap.min14ed.css?v=3.3.6', rel='stylesheet')
+        link(href='css/font-awesome.min93e3.css?v=4.4.0', rel='stylesheet')
+        link(href='css/plugins/footable/footable.core.css', rel='stylesheet')
+        link(href='css/animate.min.css', rel='stylesheet')
+        link(href='css/style.min862f.css?v=4.1.0', rel='stylesheet')
+        //script(src="//cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js")
+        script(src='js/jquery.min.js?v=2.1.4')
+    body.gray-bg()
+        .wrapper.wrapper-content.animated.fadeInRight
+            .row
+                .col-sm-12
+                    .ibox.float-e-margins
+                        .ibox-title
+                            h5 用户审批列表
+                            .ibox-tools
+                                a.collapse-link
+                                    i.fa.fa-chevron-up
+                                a.dropdown-toggle(data-toggle='dropdown', href='#')
+                                    i.fa.fa-wrench
+                                ul.dropdown-menu.dropdown-user
+                                    li
+                                        a(href='#') 选项 01
+                                    li
+                                        a(href='#') 选项 02
+                                a.close-link
+                                    i.fa.fa-times
+                        .ibox-content
+                            table.footable.table.table-stripped.toggle-arrow-tiny(data-page-size='8')
+                                thead
+                                    tr
+                                        th(data-toggle='true') 用户名
+                                        th 口令
+                                        th 电子邮箱
+                                        //th(data-hide='all') 公司
+                                        //th(data-hide='all') 参数
+                                        //th(data-hide='all') 采购数量
+                                        //th(data-hide='all') 日期
+                                        th 申请时间
+                                        th 用户角色
+                                        th 操作
+                                        th 状态
+                                tbody
+                                    each item in users
+                                        tr
+                                            td #{item.username}
+                                            td #{item.password}
+                                            td #{item.email}
+                                            td #{item.meta.createAt}
+                                            td
+                                                select(id='sel_'+item.username)
+                                                    each role in roles
+                                                        option(value=role) #{role}
+                                            td
+                                                button.btn.btn-primary.block.full-width.m-b(id='passbtn_'+item.username, name='pass', value=item.username) 同意
+                                                button.btn.btn-danger.block.full-width.m-b(id='rejectbtn_'+item.username, name='reject', value=item.username) 拒绝
+                                            td
+                                                i.fa.fa-circle-o.text-navy(id='i_'+item.username) 待审批
+        script.
+            $(document).ready(function () {
+                $("button").click(function() {
+                    //取得用户名、审批结果、用户角色
+                    var username = $(this).val();
+                    var method = $(this).attr('name');
+                    var userrole = $('#sel_'+username).val();
+                    //禁用btn
+                    $('#passbtn_'+username).attr('disabled',true);
+                    $('#rejectbtn_'+username).attr('disabled',true);
+                    //更改tag样式
+                    $('#i_'+username).text(method);
+                    if(method=='pass'){
+                        $('#i_'+username).removeClass('fa-circle-o').addClass('fa-check');
+                    }
+                    if(method=='reject'){
+                        $('#i_'+username).removeClass('fa-circle-o').addClass('fa-close');
+                    }
+                    //取得用户角色
+                    $.post('/addUser', {addname: username, addrole: userrole, addmethod: method},function (data, status) {
+
+                    });
+                });
+            });

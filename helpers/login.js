@@ -20,6 +20,7 @@ exports.accessdb = function (req, res, next) {
         else if (password==user.password) {
             //提取用户名
             req.session.userId = user.username;
+            req.session.userRole = user.role;
             res.redirect('/');
         }
         //用户口令错误，渲染登录错误页面

@@ -36,26 +36,19 @@ UserSchema.pre('save',function(next) {
 
 //静态方法
 UserSchema.statics = {
-    fetch: function(cb){
+    fetch: function (cb) {
         return this
             .find()
-            .sort({'meta.updateAt':1})
+            .sort({'meta.updateAt': 1})
             .exec(cb)
     },
-    findByName: function(name, cb){
+    findByName: function (name, cb) {
         return this
             .findOne({username: name})
             .exec(cb)
     },
-    deleteByName: function(name, cb){
-        return this
-            .delete({username: name})
-            .exec(cb)
-    },
-    insertUser: function (user, cb) {
-        return this
-            .save(user)
-            .exec(cb)
+    deleteByName: function (name) {
+        this.delete({username: name})
     }
 };
 
