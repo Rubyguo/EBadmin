@@ -1,24 +1,248 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c644f08c-3e16-4a28-84be-e2edfe067e84" name="默认的" comment="较大改动：改用第三方中间件node_acl实现用户权限管理，完善了注册和登录页面的功能（angularjs实现），新增管理员用户的授权页面，更改数据库结构，新增了users集合（已注册用户），userAcls集合（用户权限管理），user_reg集合（待审批用户）">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/helpers/send_email.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/helpers/user_reg.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/test/badges_labels.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/test/table_data_tables.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/test/table_foo_table.jade" />
+    <list default="true" id="c644f08c-3e16-4a28-84be-e2edfe067e84" name="默认的" comment="完成了注册用户管理的主要功能，下一步要向用户邮箱发送通知邮件">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/ui-grid.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/ui-grid.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/ui-grid.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpreq/test/testupload.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/.bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/bower.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/animation.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/body.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/bootstrap/bootstrap.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/cell.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/cellnav/less/cellNav.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/edit/less/edit.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/elements.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/expandable/less/expandable.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/exporter/less/exporter.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/footer.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/goups.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/grid.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/grouping/less/grouping.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/header.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/icons.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/importer/less/importer.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/main.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/menu.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/move-columns/less/colMovable.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/pagination/less/pagination.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/pinning/less/pinning.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/resize-columns/less/column-resizer.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/row-edit/less/rowEdit.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/rtl.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/selection/less/selection.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/sorting.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/tree-base/less/tree-base.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/tree-view/less/tree-view.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/validate/less/validate.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/less/variables.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/ui-grid.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/ui-grid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/ui-grid.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/ui-grid.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/angular-ui-grid/ui-grid.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/addressparser/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/addressparser/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/addressparser/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/addressparser/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/addressparser/lib/addressparser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/addressparser/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/buildmail/.eslintrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/buildmail/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/buildmail/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/buildmail/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/buildmail/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/buildmail/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/buildmail/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/buildmail/lib/buildmail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/buildmail/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/buildmail/test/fixtures/attachment.bin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/buildmail/test/libbuildmail-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpntlm/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpntlm/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpntlm/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpntlm/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpntlm/httpntlm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpntlm/ntlm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpntlm/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpreq/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpreq/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpreq/contributors.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpreq/examples.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpreq/lib/httpreq.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpreq/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/httpreq/test/tests.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/Changelog.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/dbcs-codec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/dbcs-data.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/internal.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/sbcs-codec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/sbcs-data-generated.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/sbcs-data.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/tables/big5-added.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/tables/cp936.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/tables/cp949.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/tables/cp950.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/tables/eucjp.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/tables/gb18030-ranges.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/tables/gbk-added.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/tables/shiftjis.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/utf16.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/encodings/utf7.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/lib/bom-handling.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/lib/extend-node.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/lib/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/lib/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/lib/streams.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/iconv-lite/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/ip/.jscsrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/ip/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/ip/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/ip/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/ip/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/ip/lib/ip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/ip/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/ip/test/api-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libbase64/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libbase64/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libbase64/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libbase64/lib/libbase64.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libbase64/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libmime/.eslintrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libmime/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libmime/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libmime/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libmime/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libmime/lib/charset.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libmime/lib/libmime.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libmime/lib/mimetypes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libmime/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libqp/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libqp/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libqp/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libqp/lib/libqp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/libqp/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/mailcomposer/.eslintrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/mailcomposer/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/mailcomposer/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/mailcomposer/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/mailcomposer/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/mailcomposer/lib/mailcomposer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/mailcomposer/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-direct-transport/.eslintrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-direct-transport/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-direct-transport/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-direct-transport/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-direct-transport/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-direct-transport/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-direct-transport/lib/direct-transport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-direct-transport/lib/message-queue.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-direct-transport/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-direct-transport/test/direct-transport-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-direct-transport/test/message-queue-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-fetch/.eslintrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-fetch/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-fetch/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-fetch/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-fetch/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-fetch/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-fetch/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-fetch/lib/cookies.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-fetch/lib/fetch.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-fetch/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-fetch/test/cookies-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-fetch/test/fetch-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-shared/.eslintrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-shared/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-shared/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-shared/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-shared/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-shared/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-shared/lib/shared.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-shared/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-shared/test/fixtures/message.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-shared/test/shared-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-pool/.eslintrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-pool/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-pool/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-pool/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-pool/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-pool/lib/assign.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-pool/lib/pool-resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-pool/lib/smtp-pool.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-pool/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-transport/.eslintrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-transport/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-transport/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-transport/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-transport/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-transport/lib/smtp-transport.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-smtp-transport/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-wellknown/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-wellknown/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-wellknown/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-wellknown/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-wellknown/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-wellknown/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-wellknown/services.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer-wellknown/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer/.eslintrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer/ISSUE_TEMPLATE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer/lib/http-proxy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer/lib/nodemailer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer/lib/template-sender.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/nodemailer/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/punycode/LICENSE-MIT.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/punycode/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/punycode/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/punycode/punycode.es6.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/punycode/punycode.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smart-buffer/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smart-buffer/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smart-buffer/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smart-buffer/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smart-buffer/lib/smart-buffer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smart-buffer/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smart-buffer/test/smart-buffer.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smart-buffer/typings/index.d.ts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smtp-connection/.eslintrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smtp-connection/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smtp-connection/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smtp-connection/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smtp-connection/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smtp-connection/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smtp-connection/lib/data-stream.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smtp-connection/lib/smtp-connection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/smtp-connection/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socks/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socks/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socks/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socks/examples/associate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socks/examples/bind.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socks/examples/connect.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socks/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socks/lib/socks-agent.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socks/lib/socks-client.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/socks/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/underscore/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/underscore/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/underscore/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/underscore/underscore-min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/underscore/underscore.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/acl.js" afterPath="$PROJECT_DIR$/helpers/acl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/login.js" afterPath="$PROJECT_DIR$/helpers/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/schemas/user_reg.js" afterPath="$PROJECT_DIR$/schemas/user_reg.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/basic.jade" afterPath="$PROJECT_DIR$/views/basic.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.jade" afterPath="$PROJECT_DIR$/views/login.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pages/user_authorize.jade" afterPath="$PROJECT_DIR$/views/pages/user_authorize.jade" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/views/index_v1.jade" afterPath="$PROJECT_DIR$/views/mainpage.jade" />
     </list>
     <ignored path="EBadmin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,8 +276,8 @@
       <file leaf-file-name="send_email.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/helpers/send_email.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+            <state relative-caret-position="486">
+              <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -129,7 +353,9 @@
         <option value="Rubyguo" />
       </list>
     </option>
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="FORCE_PUSH_ALLOWED" value="true" />
     <option name="PUSH_TAGS">
       <GitPushTagMode />
     </option>
@@ -275,7 +501,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="0.12.7" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -393,7 +619,7 @@
       <workItem from="1481082697301" duration="3546000" />
       <workItem from="1481112678411" duration="10285000" />
       <workItem from="1481169886423" duration="27573000" />
-      <workItem from="1481286714448" duration="15285000" />
+      <workItem from="1481286714448" duration="15593000" />
     </task>
     <task id="LOCAL-00001" summary="删除了一些不必要的nmp依赖项，用bower添加angularjs、oclazyload、angular-ui-router。删除了user的mongodb模型和相关路由">
       <created>1480513629579</created>
@@ -423,11 +649,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481124518084</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="完成了注册用户管理的主要功能，下一步要向用户邮箱发送通知邮件">
+      <created>1481303215174</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1481303215174</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200955000" />
+    <option name="totallyTimeSpent" value="201263000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -440,7 +673,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20243773" sideWeight="0.73239434" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744405" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -449,7 +682,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20306966" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29397875" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29397875" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962743" sideWeight="0.41190475" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39787486" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -507,7 +740,8 @@
     <MESSAGE value="运用bower管理js文件" />
     <MESSAGE value="修改了angularjs的目录结构" />
     <MESSAGE value="较大改动：改用第三方中间件node_acl实现用户权限管理，完善了注册和登录页面的功能（angularjs实现），新增管理员用户的授权页面，更改数据库结构，新增了users集合（已注册用户），userAcls集合（用户权限管理），user_reg集合（待审批用户）" />
-    <option name="LAST_COMMIT_MESSAGE" value="较大改动：改用第三方中间件node_acl实现用户权限管理，完善了注册和登录页面的功能（angularjs实现），新增管理员用户的授权页面，更改数据库结构，新增了users集合（已注册用户），userAcls集合（用户权限管理），user_reg集合（待审批用户）" />
+    <MESSAGE value="完成了注册用户管理的主要功能，下一步要向用户邮箱发送通知邮件" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了注册用户管理的主要功能，下一步要向用户邮箱发送通知邮件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -657,6 +891,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -672,6 +907,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
           <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -679,6 +915,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
           <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -839,8 +1076,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helpers/send_email.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        <state relative-caret-position="486">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
           </folding>
